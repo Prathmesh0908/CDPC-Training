@@ -1,0 +1,65 @@
+1. https://www.hackerrank.com/challenges/compare-the-triplets/problem
+ap=0
+    bp=0
+    for i in range (3):
+        if a[i]>b[i]:
+            ap=ap+1
+        elif a[i]<b[i]:
+            bp=bp+1
+        elif b[i]==a[i]:
+            pass
+    return ap,bp
+
+
+2. https://www.hackerrank.com/challenges/a-very-big-sum/problem
+sum=0
+    for i in range(len(ar)):
+        sum += ar[i]
+    return sum
+
+
+  3. https://www.hackerrank.com/challenges/diagonal-difference/problem
+  sum1=0
+    sum2=0
+    n=len(arr)
+    for i in range(n):
+        sum1=sum1+arr[i][i]
+        sum2=sum2+arr[i][n-1-i]
+    return abs(sum1-sum2)
+
+
+  4. https://www.hackerrank.com/challenges/plus-minus/problem
+   n = len(arr)
+    
+     positive = 0
+     negative = 0
+     zero = 0
+     
+     for num in arr:
+        if num > 0:
+            positive += 1
+        elif num < 0:
+            negative += 1
+        else:
+            zero += 1
+    
+     print(f"{positive/n:.6f}")
+     print(f"{negative/n:.6f}")
+     print(f"{zero/n:.6f}")
+
+
+*Array Rotation*
+arr=eval(input("Enter: "))
+n=int(input("enter n: "))
+len=len(arr)
+arr=arr[len-n:]+arr[:len-n]
+print(arr)
+
+Another Method
+n=1
+arr=[1,2,3,4,5]
+for x in range(n):
+    temp=arr[-1]
+    for i in range(len(arr),0,1):
+        arr[i]=arr[i-1]
+    arr[0]=[temp]
