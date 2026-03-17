@@ -1,0 +1,46 @@
+1. https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/roy-and-profile-picture/
+L = int(input())
+N = int(input())
+ 
+for i in range(N):
+    W, H = map(int, input().split())
+ 
+    if W < L or H < L:
+        print("UPLOAD ANOTHER")
+    elif W == H:
+        print("ACCEPTED")
+    else:
+        print("CROP IT")
+
+
+2. https://www.hackerearth.com/problem/algorithm/monk-and-rotation-3-bcf1aefe/
+t = int(input())
+
+for i in range(t):
+    n,k =map(int, input().split())
+    arr=list(map(int, input().split()))
+
+    k=k%n
+    result=arr[n-k:]+arr[:n-k]
+    print(*result)
+
+
+3. https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/modify-the-string/?utm_source=chatgpt.com
+t = int(input())
+
+for i in range(t):
+    n,k =map(int, input().split())
+    arr=list(map(int, input().split()))
+
+    k=k%n
+    result=arr[n-k:]+arr[:n-k]
+    print(*result)
+
+
+*Majority Element*
+arr=[3,3,4,2,4,4,2,4,4]
+n=len(arr)
+for i in arr:
+    if arr.count(i)>n/2:
+        print("Majority Element")
+        break
