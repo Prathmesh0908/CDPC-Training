@@ -48,4 +48,41 @@ def staircase(n):
         hashes = "#" * i
         print(spaces + hashes)
 
+*Magic Square Problem*
+def magic_square_3x3():
+    n = 3
+    magic = [[0]*n for _ in range(n)]
+    num = 1
+    i, j = 0, n//2 
+    while num <= n*n:
+        magic[i][j] = num
+        num += 1
+        new_i = (i - 1) % n
+        new_j = (j + 1) % n
 
+        if magic[new_i][new_j]:
+            i = (i + 1) % n
+        else:
+            i, j = new_i, new_j
+    return magic
+square = magic_square_3x3()
+for row in square:
+    print(row)
+
+
+5. https://www.hackerrank.com/challenges/mini-max-sum/problem?isFullScreen=true
+total = sum(arr)
+    min_val = min(arr)
+    max_val = max(arr)
+    
+    min_sum = total - max_val
+    max_sum = total - min_val
+
+
+6. https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true
+tallest = max(candles)
+    count = candles.count(tallest)
+    return count
+
+
+7. https://www.hackerrank.com/challenges/time-conversion/problem
