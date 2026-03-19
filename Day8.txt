@@ -24,6 +24,8 @@ class Solution:
             else:
                 answer.append(str(i))
         return answer
+
+
 3. https://leetcode.com/problems/running-sum-of-1d-array/
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
